@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Rating</title>
+</head>
+<body>
+     <!-- Create a form that will submit a POST request to the "edit" route when the "Change Rating" button is clicked -->
+     <form action="{{ url_for('edit') }}" method="POST">
+        <p>Book Name: {{book.title}}</p>
+        <p>Current Rating {{book.rating}}</p>
+         <!-- Create a hidden input field for the book ID -->
+        <input hidden="hidden" name="id" value="{{book.id}}">
+        <!-- Create an input field for the new book rating -->
+        <input name="rating" type="text" placeholder="New Rating">
+        <!-- Create a button to submit the form -->
+        <button type="submit">Change Rating</button>
+    </form>
+</body>
+</html>

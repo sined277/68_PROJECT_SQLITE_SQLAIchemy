@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book</title>
+</head>
+<body>
+    <!-- Create a form that will submit a POST request to the "add" route when the "Add Book" button is clicked -->
+    <form action="{{ url_for('add') }}" method="POST">
+        <label>Book Name</label>
+        <!-- Create an input field for the book title -->
+        <input name='title' type="text">
+        <label>Book Author</label>
+        <!-- Create an input field for the book author -->
+        <input name='author' type="text">
+        <label>Rating</label>
+        <!-- Create an input field for the book rating -->
+        <input name='rating' type="text">
+        <!-- Create a button to submit the form -->
+        <button type="submit">Add Book</button>
+    </form>
+</body>
+</html>
